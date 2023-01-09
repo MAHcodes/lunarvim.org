@@ -85,8 +85,8 @@ const TeamMember = ({ name, username, img, bio, contributions, changes, donate }
       {img ? <img src={img} alt="profile pic" /> : null}
       <h3>{nameEl} {usernameEl}</h3>
       <p className={styles.details}>{contributions} commits
-        {changes ? <span className={styles.a}>{changes.a}++</span> : null}
-        {changes ? <span className={styles.d}>{changes.d}--</span> : null}
+        {changes ? <span className={styles.a}>{changes.a.toLocaleString()}++</span> : null}
+        {changes ? <span className={styles.d}>{changes.d.toLocaleString()}--</span> : null}
       </p>
       <p>{bio ? bio : "Write something about yourself."}</p>
       <div style={{ clear: "both" }}> </div>
